@@ -1,5 +1,6 @@
 import bpy
 
+##Eliminar transformaciones
 #Obtén los objetos seleccionados
 objects = bpy.context.selected_objects
 
