@@ -3,6 +3,7 @@ import bpy
 ##Eliminar transformaciones
 #Obtén los objetos seleccionados
 objects = bpy.context.selected_objects
+NombrePersonaje = "Bimbo"
 
 #Itera sobre los objetos seleccionados
 for obj in objects:
@@ -57,17 +58,17 @@ def create_collection_rigSystem(name):
 
 
 # Crea la colección principal
-main_collection = create_collection_Main('CH-Girl')
+main_collection = create_collection_Main('CH-'+NombrePersonaje)
 
 # Crea las otras colecciones y las vincula a la colección principal
-create_collection_shader('cha_Girl_shader', main_collection)
-create_collection_rig('cha_Girl_rig', main_collection)
+create_collection_shader('cha_'+NombrePersonaje +'_shader', main_collection)
+create_collection_rig('cha_'+NombrePersonaje+'_rig', main_collection)
 
 # Crea la colección rig_system y la vincula a la escena
 create_collection_rigSystem('rig_system')
 
 # Obtiene la colección cha_Girl_shader
-shader_collection = bpy.data.collections['cha_Girl_shader']
+shader_collection = bpy.data.collections['cha_'+NombrePersonaje +'_shader']
 
 # Itera sobre todos los objetos seleccionados
 for obj in bpy.context.selected_objects:
