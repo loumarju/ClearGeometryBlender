@@ -17,18 +17,8 @@ for obj in objects:
 #Elimina las transformaciones de la geometría
 bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)
 
-###################################################################################
-#Renombrar geometría
-#bpy.data.window_managers["WinMan"].(null) = 'PREFIX'
-#bpy.data.window_managers["WinMan"].(null) = "geo_"
-#bpy.data.window_managers["WinMan"].(null) = 'SUFFIX'
-#bpy.data.window_managers["WinMan"].(null) = "_00_n"
 
-
-###################################################################################
-#Ordenar colecciones
-
-
+##Ordenar colecciones
 
 def create_collection_Main(name):
     # Crea una nueva colección con el nombre dado
@@ -85,3 +75,16 @@ for obj in bpy.context.selected_objects:
         coll.objects.unlink(obj)
     # Añade el objeto a la colección cha_Girl_shader
     shader_collection.objects.link(obj)
+
+
+##Renombrar geometría
+# Itera sobre todos los objetos seleccionados
+for obj in bpy.context.selected_objects:
+    # Añade el prefijo y el sufijo al nombre del objeto
+    obj.name = 'geo_' + obj.name + '_00_n'
+
+
+
+
+
+
