@@ -1,3 +1,15 @@
+'''
+Este script sirve para limpiar la geometría de una selección de transformaciones y claves, 
+crear una jerarquía de colecciones y renombrar la geometría según una nomenclatura predeterminada.
+Tienes que seleccionar la geometría a la cual quieres aplicarle el script.
+
+This script allows to clean the transformations and keys in the selected geometry, 
+create the collection hierarchy and rename the geometry with a standar nomenclature.
+You have to select the geometry that you want to apply the script.
+
+'''
+
+
 import bpy
 
 ##Eliminar transformaciones
